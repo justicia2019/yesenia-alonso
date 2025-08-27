@@ -4,7 +4,7 @@
     --cabeza_sfondo: #703929;
     --cabeza_color: #f6d8ee;
     --primary_sfondo: #83432f;
-    --cabeza_font_size: clamp(1rem, 2.5vw, 3.5vw);
+    --cabeza_font_size: clamp(1.5rem, 2.2vw, 3.5vw);
     --menu_font_size: clamp(0.8rem, 1.5vw, 2.5vw);
 
     --inicio1_font_size: clamp(1rem, 3.2vw, 4.2vw);
