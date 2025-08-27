@@ -7,7 +7,7 @@
     --cabeza_font_size: clamp(1rem, 2.5vw, 3.5vw);
     --menu_font_size: clamp(0.8rem, 1.5vw, 2.5vw);
 
-    --inicio1_font_size: clamp(1.7rem, 3.2vw, 4.2vw);
+    --inicio1_font_size: clamp(1.6rem, 3.2vw, 4.2vw);
     --inicio2_font_size: clamp(0.8rem, 1.5vw, 2.5vw);
 }
 
@@ -659,6 +659,7 @@ input[type="radio"]:checked::before {
     }
 
 }
+
 
 
 
