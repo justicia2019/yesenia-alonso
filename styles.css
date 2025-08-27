@@ -18,9 +18,9 @@ html {
 html,
 body {
     width: 100vw;
-    min-height: 100vh;
+    height: 100%;
     display: grid;
-    grid-template-rows: 15vh 80vh 5vh;
+    grid-template-rows: 15% 80% 5%;
     grid-template-columns: 100%;
     padding: 0;
     margin: 0;
@@ -659,6 +659,7 @@ input[type="radio"]:checked::before {
     }
 
 }
+
 
 
 
