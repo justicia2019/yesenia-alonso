@@ -422,7 +422,7 @@ body {
     font-size: clamp(0.6rem, 1.2vw, 2.2vw);
     overflow: hidden !important;
     margin-top: 0.5rem;
-
+    transform: translateZ(0);
     .ventana {
         margin: 0;
         padding: 1rem;
@@ -659,6 +659,7 @@ input[type="radio"]:checked::before {
     }
 
 }
+
 
 
 
