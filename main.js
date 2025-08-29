@@ -3,7 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const radios = document.querySelectorAll('input[name="group1"]');
   const container = document.querySelector('.card-blog-container');
   const originalCards = Array.from(document.querySelectorAll('.card-blog'));
+  const allCards = Array.from(container.querySelectorAll('.card-blog'));
+  let currentIndex = totalOriginal; // Start at first real card (after the clones)
+
+  const menuMobile = document.querySelector('.mobile-container')
+  const computedDisplay = window.getComputedStyle(menuMobile).display;
   const totalOriginal = originalCards.length;
+
+  const page = document.querySelector('.page');
+
+  const contactBtn = document.getElementById('contactBtn');
+  const contactTarget = document.getElementById('Contactamos');
 
   if (originalCards.length === 0) return;
 
@@ -17,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(afterClone);
   });
 
-  const allCards = Array.from(container.querySelectorAll('.card-blog'));
 
-  let currentIndex = totalOriginal; // Start at first real card (after the clones)
 
   function getOffset(index) {
     let offset = 0;
@@ -74,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize at the first actual card
   slideTo(totalOriginal);
+  //if (window.matchMedia("(max-width: 992px)").matches) {
 
-
-  if (window.matchMedia("(max-width: 992px)").matches) {
+  if (computedDisplay === 'flex') {
     const menuButton = document.getElementById('menuBtn');
     const menu = document.querySelector('.mobile_menu'); // ← fixed selector
     const closeButton = document.getElementById('btnClose');
@@ -85,7 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (menu.style.display === 'flex') {
         menu.style.display = 'none';
       } else {
-        menu.style.display = 'flex';
+        setTimeout(() => {
+          menu.style.display = 'flex';
+        }, 0);
       }
     });
 
@@ -113,8 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const page = document.querySelector('.page');
-
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -131,9 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  const contactBtn = document.getElementById('contactBtn');
-  const contactTarget = document.getElementById('Contactamos');
 
   if (contactBtn && contactTarget && page.contains(contactTarget)) {
     contactBtn.addEventListener('click', (e) => {
