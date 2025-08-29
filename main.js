@@ -105,11 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuLinks = menu.querySelectorAll('a');
 
     // Close menu when any nav link is clicked
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.style.display = 'none';
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          this.setTimeout(() => {
+            menu.style.display = 'none';
+          }, 500);
+        });
       });
-    });
 
     closeButton.addEventListener('click', function () {
       menu.style.display = 'none';
@@ -139,7 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Close menu when any nav link is clicked
       menuLinks.forEach(link => {
         link.addEventListener('click', () => {
-          menu.style.display = 'none';
+          this.setTimeout(() => {
+            menu.style.display = 'none';
+          }, 500);
         });
       });
 
@@ -179,3 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
