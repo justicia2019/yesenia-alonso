@@ -104,7 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   window.addEventListener("resize", function () {
-    if (window.matchMedia("(max-width: 992px)").matches) {
+    if (computedDisplay === 'flex') {
+      // if (window.matchMedia("(max-width: 992px)").matches) {
       const menuButton = document.getElementById('menuBtn');
       const menu = document.querySelector('.mobile_menu'); // ← fixed selector
       const closeButton = document.getElementById('btnClose');
@@ -113,7 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (menu.style.display === 'flex') {
           menu.style.display = 'none';
         } else {
-          menu.style.display = 'flex';
+          setTimeout(() => {
+            menu.style.display = 'flex';
+          }, 0);
         }
       });
 
