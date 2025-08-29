@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.card-blog-container');
   const originalCards = Array.from(document.querySelectorAll('.card-blog'));
   const allCards = Array.from(container.querySelectorAll('.card-blog'));
+  const totalOriginal = originalCards.length;
   let currentIndex = totalOriginal; // Start at first real card (after the clones)
 
   const menuMobile = document.querySelector('.mobile-container')
   const computedDisplay = window.getComputedStyle(menuMobile).display;
-  const totalOriginal = originalCards.length;
 
   const page = document.querySelector('.page');
 
@@ -156,3 +156,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
