@@ -91,7 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
     menuButton.addEventListener('click', function () {
       // Toggle visibility
       if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
+        setTimeout(() => {
+          menu.style.display = 'none';
+        }, 0);
       } else {
         setTimeout(() => {
           menu.style.display = 'flex';
@@ -112,7 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
       menuButton.addEventListener('click', function () {
         // Toggle visibility
         if (menu.style.display === 'flex') {
-          menu.style.display = 'none';
+          setTimeout(() => {
+            menu.style.display = 'none';
+          }, 0);
         } else {
           setTimeout(() => {
             menu.style.display = 'flex';
@@ -156,4 +160,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
