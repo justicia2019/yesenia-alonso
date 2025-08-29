@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const radios = document.querySelectorAll('input[name="group1"]');
   const container = document.querySelector('.card-blog-container');
   const originalCards = Array.from(document.querySelectorAll('.card-blog'));
-  const allCards = Array.from(container.querySelectorAll('.card-blog'));
+  
   const totalOriginal = originalCards.length;
   let currentIndex = totalOriginal; // Start at first real card (after the clones)
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(afterClone);
   });
 
-
+  const allCards = Array.from(container.querySelectorAll('.card-blog'));
 
   function getOffset(index) {
     let offset = 0;
@@ -183,4 +183,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
 
