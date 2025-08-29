@@ -572,7 +572,7 @@ footer p {
     }
 }
 
-h1,
+/* h1,
 h2,
 p,
 input,
@@ -583,8 +583,12 @@ a {
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+} */
+.user-select-none {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
-
 input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
@@ -658,6 +662,7 @@ input[type="radio"]:checked::before {
     }
 
 }
+
 
 
 
