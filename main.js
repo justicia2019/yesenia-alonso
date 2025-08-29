@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactBtn = document.getElementById('contactBtn');
   const contactTarget = document.getElementById('Contactamos');
 
+
   if (originalCards.length === 0) return;
 
   // Clone all original cards before and after
@@ -101,6 +102,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    const menuLinks = menu.querySelectorAll('a');
+
+    // Close menu when any nav link is clicked
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.style.display = 'none';
+      });
+    });
+
     closeButton.addEventListener('click', function () {
       menu.style.display = 'none';
     });
@@ -122,6 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.style.display = 'flex';
           }, 0);
         }
+      });
+
+      const menuLinks = menu.querySelectorAll('a');
+
+      // Close menu when any nav link is clicked
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.style.display = 'none';
+        });
       });
 
       closeButton.addEventListener('click', function () {
